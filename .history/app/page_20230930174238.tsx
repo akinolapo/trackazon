@@ -7,7 +7,7 @@ const Home = () => {
         <div className="flex max-xl:flex-col gap-16">
           <div className="flex flex-col justify-center">
             <p className="small-text">
-              Save More as You Shop:
+            Save More as You Shop:
               <Image
                 src="/assets/icons/arrow-right.svg"
                 alt="arrow-right"
@@ -16,7 +16,7 @@ const Home = () => {
               />
             </p>
             <h1 className="head-text">
-              Unleash the Power of
+            Unleash the Power of
               <span className="text-primary"> TrackAzon</span>
             </h1>
             <p className="mt-6">

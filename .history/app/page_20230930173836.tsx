@@ -16,14 +16,12 @@ const Home = () => {
               />
             </p>
             <h1 className="head-text">
-              Unleash the Power of
+            Your Price, Our Priority:
               <span className="text-primary"> TrackAzon</span>
             </h1>
             <p className="mt-6">
               Discover a smarter way to shop online with Trackazon. Keep tabs on product prices effortlessly, so you never miss a great deal.
             </p>
-
-            Searchbar
           </div>
         </div>
       </section>

@@ -7,7 +7,7 @@ const Home = () => {
         <div className="flex max-xl:flex-col gap-16">
           <div className="flex flex-col justify-center">
             <p className="small-text">
-              Save More as You Shop:
+              Smart Shopping Starts Here:
               <Image
                 src="/assets/icons/arrow-right.svg"
                 alt="arrow-right"
@@ -16,14 +16,9 @@ const Home = () => {
               />
             </p>
             <h1 className="head-text">
-              Unleash the Power of
-              <span className="text-primary"> TrackAzon</span>
+              Unless the Power of
+              
             </h1>
-            <p className="mt-6">
-              Discover a smarter way to shop online with Trackazon. Keep tabs on product prices effortlessly, so you never miss a great deal.
-            </p>
-
-            Searchbar
           </div>
         </div>
       </section>
