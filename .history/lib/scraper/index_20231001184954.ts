@@ -41,9 +41,9 @@ export async function scrapeAmazonProduct(url:string) {
             $('.a-size-base.a-color-price')
         )
 
-        const outOfStock = $('#availability span').text().trim().toLowerCase() === 'currently unavailable'
+        const outOfStock = $('#availability span').text
 
-        console.log(title, currentPrice, originalPrice, outOfStock)
+        console.log(title, currentPrice, originalPrice)
     } catch (error: any) {
         throw new Error(`Failed to scrape product: ${error.message}`);
         
