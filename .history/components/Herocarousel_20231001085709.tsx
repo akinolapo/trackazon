@@ -36,11 +36,10 @@ const Herocarousel = () => {
             </Carousel>
 
             <Image
-                src='assets/icons/hand-drawn-arrow.svg'
+                src='assets/icons/hand-drawn-arow.svg'
                 alt="arrow"
-                width={175}
-                height={175}
-                className="max-xl:hidden absolute -left-[15%] buttom-0 z-0"
+                width={20}
+                height={20}
             />
         </div>
     )

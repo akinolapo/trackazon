@@ -40,7 +40,7 @@ const Herocarousel = () => {
                 alt="arrow"
                 width={175}
                 height={175}
-                className="max-xl:hidden absolute -left-[15%] buttom-0 z-0"
+                className="max-xl:hidden"
             />
         </div>
     )
