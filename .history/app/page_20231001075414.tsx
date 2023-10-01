@@ -1,11 +1,9 @@
-import Herocarousel from "@/components/Herocarousel"
-import Searchbar from "@/components/Searchbar"
 import Image from "next/image"
 
 const Home = () => {
   return (
     <>
-      <section className="px-6 md:px-20 py-24">
+      <section className="px-6 md:px-20 py-24 border-2 border-red-500">
         <div className="flex max-xl:flex-col gap-16">
           <div className="flex flex-col justify-center">
             <p className="small-text">
@@ -25,10 +23,10 @@ const Home = () => {
               Discover a smarter way to shop online with Trackazon. Keep tabs on product prices effortlessly, so you never miss a great deal.
             </p>
 
-            <Searchbar/>
+            Searchbar
           </div>
 
-          <Herocarousel/>
+          HeroCarousel
         </div>
       </section>
       <section className="trending-section">
@@ -36,8 +34,8 @@ const Home = () => {
 
         <div className="flex flex-wrap gap-x-8 gap-y-16">
           {['Apple Iphone 15', 'Book', 'Sneakers'].map
-          ((product) => (
-            <div>{product}</div>
+          ((product
+
           ))}
         </div>
       </section>
