@@ -22,7 +22,7 @@ const isValidAmazonProductURL = (url: string) => {
 
 const Searchbar = () => {
   const [searchPrompt, setSearchPrompt] = useState('')
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState('')
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
@@ -31,13 +31,9 @@ const Searchbar = () => {
     if(!isValidLink) return alert('Please provide a valid Amazon link')
 
     try {
-      setIsLoading(true)
-
-      //Scrape the product page
+      
     } catch (error) {
-      console.log(error)
-    } finally{
-      setIsLoading(false)
+      
     }
    }
   return (
@@ -49,13 +45,7 @@ const Searchbar = () => {
         placeholder="Enter product link"
         className="searchbar-input"
       />
-      <button 
-        type="submit"
-        className="searchbar-btn"
-        disabled={searchPrompt === ''}
-      >
-        {isLoading ? 'Searching...' : 'Search'}
-      </button>
+      <button type="submit" className="searchbar-btn">Search</button>
     </form>
   )
 }

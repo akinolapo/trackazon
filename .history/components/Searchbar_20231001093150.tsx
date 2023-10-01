@@ -32,10 +32,8 @@ const Searchbar = () => {
 
     try {
       setIsLoading(true)
-
-      //Scrape the product page
     } catch (error) {
-      console.log(error)
+      
     } finally{
       setIsLoading(false)
     }
@@ -50,9 +48,7 @@ const Searchbar = () => {
         className="searchbar-input"
       />
       <button 
-        type="submit"
-        className="searchbar-btn"
-        disabled={searchPrompt === ''}
+      type="submit" className="searchbar-btn"
       >
         {isLoading ? 'Searching...' : 'Search'}
       </button>

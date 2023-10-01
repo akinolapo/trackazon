@@ -8,37 +8,18 @@ const isValidAmazonProductURL = (url: string) => {
     const hostname = parsedURL.hostname
 
     //Check if hostname is amazon.com pr amazon.ca
-    if(hostname.includes('amazon.com') || 
-    hostname.includes('amazon.') || 
-    hostname.endsWith('amazon')
-    ){
-      return true
-    }
+    if(hostname.includes('amazon.com') || hostname.includes('amazon.') || hostname.endsWith(''))
   } catch (error) {
-    return false    
+    
   }
-  return false
 }
 
 const Searchbar = () => {
   const [searchPrompt, setSearchPrompt] = useState('')
-  const [isLoading, setIsLoading] = useState(false)
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
     const isValidLink = isValidAmazonProductURL(searchPrompt)
-
-    if(!isValidLink) return alert('Please provide a valid Amazon link')
-
-    try {
-      setIsLoading(true)
-
-      //Scrape the product page
-    } catch (error) {
-      console.log(error)
-    } finally{
-      setIsLoading(false)
-    }
    }
   return (
     <form className='flex flex-wrap gap-4 mt-12' onSubmit={handleSubmit}>
@@ -49,13 +30,7 @@ const Searchbar = () => {
         placeholder="Enter product link"
         className="searchbar-input"
       />
-      <button 
-        type="submit"
-        className="searchbar-btn"
-        disabled={searchPrompt === ''}
-      >
-        {isLoading ? 'Searching...' : 'Search'}
-      </button>
+      <button type="submit" className="searchbar-btn">Search</button>
     </form>
   )
 }

@@ -32,10 +32,8 @@ const Searchbar = () => {
 
     try {
       setIsLoading(true)
-
-      //Scrape the product page
     } catch (error) {
-      console.log(error)
+      console
     } finally{
       setIsLoading(false)
     }
