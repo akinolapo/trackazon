@@ -50,7 +50,7 @@ export async function scrapeAmazonProduct(url:string) {
 
         const imageUrls = Object.keys(JSON.parse(images));
 
-        console.log(title, currentPrice, originalPrice, outOfStock, imageUrls)
+        console.log(title, currentPrice, originalPrice, outOfStock, images)
     } catch (error: any) {
         throw new Error(`Failed to scrape product: ${error.message}`);
         

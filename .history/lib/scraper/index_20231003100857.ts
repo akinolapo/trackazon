@@ -45,12 +45,11 @@ export async function scrapeAmazonProduct(url:string) {
 
         const images = 
             $('#imgBlkFront').attr('data-a-dynamic-image') ||
-            $('#landingImage').attr('data-a-dynamic-image')||
-            '{}'
+            $('#landingImage').attr('data-a-dynamic-image');
 
-        const imageUrls = Object.keys(JSON.parse(images));
-
-        console.log(title, currentPrice, originalPrice, outOfStock, imageUrls)
+        const imageUrls = Object.keys(JSON.parse(image))
+s
+        console.log(title, currentPrice, originalPrice, outOfStock, image)
     } catch (error: any) {
         throw new Error(`Failed to scrape product: ${error.message}`);
         
