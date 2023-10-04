@@ -53,7 +53,7 @@ export async function scrapeAmazonProduct(url:string) {
         const currency = extractCurrency($('.a-price-symbol'));
         const discountRate = $('.savingsPercentage').text().replace(/[-%]/g,"");
 
-        console.log(title, currentPrice, originalPrice, outOfStock, imageUrls, currency, discountRate)
+        console.log(title, currentPrice, originalPrice, outOfStock, imageUrls, currency)
     } catch (error: any) {
         throw new Error(`Failed to scrape product: ${error.message}`);
         
