@@ -1,0 +1,7 @@
+import mongoose from 'mongoose';
+
+let isConnected = false; //Variable to track the connection status
+
+export const connectToDB = async function name(params:type) {
+    
+}
