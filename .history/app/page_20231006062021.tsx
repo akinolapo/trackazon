@@ -40,7 +40,7 @@ const Home = () => {
         <div className="flex flex-wrap gap-x-8 gap-y-16">
           {allProducts?.map
           ((product) => (
-            <div>{product.title}</div>
+            <div>{product}</div>
           ))}
         </div>
       </section>

@@ -4,6 +4,7 @@ import { getAllProducts } from "@/lib/actions"
 import Image from "next/image"
 
 const Home = () => {
+  // const allProducts = await getAllProducts();
   const allProducts = await getAllProducts();
 
   return (
@@ -40,7 +41,7 @@ const Home = () => {
         <div className="flex flex-wrap gap-x-8 gap-y-16">
           {allProducts?.map
           ((product) => (
-            <div>{product.title}</div>
+            <div>{product}</div>
           ))}
         </div>
       </section>

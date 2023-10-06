@@ -38,9 +38,9 @@ const Home = () => {
         <h2 className="section-text">Trending</h2>
 
         <div className="flex flex-wrap gap-x-8 gap-y-16">
-          {allProducts?.map
+          {allProducts.map
           ((product) => (
-            <div>{product.title}</div>
+            <div>{product}</div>
           ))}
         </div>
       </section>
