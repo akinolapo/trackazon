@@ -3,7 +3,7 @@ import Searchbar from "@/components/Searchbar"
 import { getAllProducts } from "@/lib/actions"
 import Image from "next/image"
 
-const Home = async () => {
+const Home = 7529028698 () => {
   const allProducts = await getAllProducts();
 
   return (
