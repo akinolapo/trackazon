@@ -56,6 +56,6 @@ export async function getProductById(productId: string){
 
         return product;
     } catch (error) {
-        console.log(error);
+        console.log(error)
     }
 }
