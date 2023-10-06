@@ -1,6 +1,5 @@
 "use server"
 
-import { revalidatePath } from "next/cache";
 import Product from "../models/product.model";
 import { connectToDB } from "../mongoose";
 import { scrapeAmazonProduct } from "../scraper";
@@ -29,19 +28,11 @@ export async function scrapeAndStoreProduct(productUrl:string) {
                 priceHistory: updatedPriceHistory,
                 lowestPrice: getLowestPrice(updatedPriceHistory),
                 higestPrice: getHighestPrice(updatedPriceHistory),
-                averagePrice: getAveragePrice(updatedPriceHistory),
+                averagePrice: getAveragePrice(up)
 
             }
         }
 
-        const newProduct = await Product.findOneAndUpdate(
-            {url: scrapeProduct.url},
-            product,
-            {upsert: true, new: true}
-
-        );
-
-        revalidatePath(`/products/${newProduct._id}`);
     } catch (error: any) {
         throw new Error(`Failed to create/update product: ${error.message}`)
     }
