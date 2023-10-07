@@ -89,13 +89,7 @@ const ProductDetails = async ({params: {id}}: Props) => {
                 <div className="product-stars">
                   <Image
                     src='/assets/icons/star.svg'
-                    alt='star'
-                    width={16}
-                    height={16}
                   />
-                  <p className="text-sm text-primary-orange font-semibold">
-                    {product.stars || '25'}
-                  </p>
                 </div>
               </div>
             </div>

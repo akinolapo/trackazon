@@ -93,7 +93,7 @@ const ProductDetails = async ({params: {id}}: Props) => {
                     width={16}
                     height={16}
                   />
-                  <p className="text-sm text-primary-orange font-semibold">
+                  <p className="text-sm">
                     {product.stars || '25'}
                   </p>
                 </div>
