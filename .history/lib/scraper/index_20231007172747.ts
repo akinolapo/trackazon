@@ -1,6 +1,6 @@
 import axios from "axios";
 import * as cheerio from "cheerio";
-import { extractCurrency, extractDescription, extractPrice, extractReview } from "../utils";
+import { extractCurrency, extractDescription, extractPrice } from "../utils";
 
 export async function scrapeAmazonProduct(url:string) {
     if(!url) return;
@@ -27,9 +27,7 @@ export async function scrapeAmazonProduct(url:string) {
 
         //Extract the product title
         const title = $('#productTitle').text().trim();
-        const reviewsCount = extractReview (
-            $('#acrCustomerReviewText')
-        );
+        const category = $('#productCategory').text().trim();
         const currentPrice = extractPrice(
             $('.priceToPay span.a-price-whole'),
             $('a.size.base.a-color-price'),
@@ -58,7 +56,7 @@ export async function scrapeAmazonProduct(url:string) {
 
         const description = extractDescription($)
 
-        console.log(title, currentPrice, originalPrice, outOfStock, imageUrls, currency, discountRate, reviewsCount)
+        console.log(title, currentPrice, originalPrice, outOfStock, imageUrls, currency, discountRate, ca)
 
         // Construt data object with scraped information
         const data = {
@@ -70,8 +68,8 @@ export async function scrapeAmazonProduct(url:string) {
             originalPrice: Number(originalPrice) || Number(currentPrice),
             priceHistory: [],
             discountRate: Number(discountRate),
-            category: 'category', //get this
-            reviewsCount, //get this
+            category, //get this
+            reviewsCount: 20, //get this
             stars: 4.5, //get this
             isOutOfStock: outOfStock,
             description,

@@ -58,7 +58,7 @@ export async function scrapeAmazonProduct(url:string) {
 
         const description = extractDescription($)
 
-        console.log(title, currentPrice, originalPrice, outOfStock, imageUrls, currency, discountRate, reviewsCount)
+        console.log(title, currentPrice, originalPrice, outOfStock, imageUrls, currency, discountRate, category)
 
         // Construt data object with scraped information
         const data = {
@@ -70,8 +70,8 @@ export async function scrapeAmazonProduct(url:string) {
             originalPrice: Number(originalPrice) || Number(currentPrice),
             priceHistory: [],
             discountRate: Number(discountRate),
-            category: 'category', //get this
-            reviewsCount, //get this
+            category, //get this
+            reviewsCount: 20, //get this
             stars: 4.5, //get this
             isOutOfStock: outOfStock,
             description,

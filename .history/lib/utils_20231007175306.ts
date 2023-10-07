@@ -126,6 +126,6 @@ export const extractReview = (element: any): number => {
     const reviewsCount = match[0]; // Extract the first occurrence of a number
     return parseFloat(reviewsCount) || 0; // Convert to a number or return 0 if invalid
   } else {
-    return 0; // Return 0 if no valid number found
+    return 0; 
   }
 };

@@ -118,7 +118,7 @@ export const formatNumber = (num: number = 0) => {
 };
 
 
-export const extractReview = (element: any): number => {
+export const extractReview = (element: JQuery): number => {
   const reviewsText = element.text(); // Get the text content from the jQuery element
   const match = reviewsText.match(/\d+/); // Match the first occurrence of a number
 

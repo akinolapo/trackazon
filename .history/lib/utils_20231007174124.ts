@@ -118,14 +118,24 @@ export const formatNumber = (num: number = 0) => {
 };
 
 
-export const extractReview = (element: any): number => {
-  const reviewsText = element.text(); // Get the text content from the jQuery element
-  const match = reviewsText.match(/\d+/); // Match the first occurrence of a number
 
-  if (match) {
-    const reviewsCount = match[0]; // Extract the first occurrence of a number
-    return parseFloat(reviewsCount) || 0; // Convert to a number or return 0 if invalid
-  } else {
-    return 0; // Return 0 if no valid number found
+//akinolapo personal code
+export const extractReview = (element: string): number => {
+  // Ensure the element is a string
+  if (typeof element !== 'string') {
+    throw new Error('Input element must be a string');
   }
+
+  // Use a regular expression to remove non-numeric characters
+  const reviewsCount = element.replace(/[^\d.]/g, '');
+
+  // Convert the resulting string to a number
+  const numericReviewsCount = parseFloat(reviewsCount);
+
+  // Check if the conversion was successful
+  if (isNaN(numericReviewsCount)) {
+    throw new Error('Unable to extract a valid numeric review count');
+  }
+
+  return numericReviewsCount;
 };
