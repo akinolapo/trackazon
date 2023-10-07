@@ -1,5 +1,4 @@
 import Herocarousel from "@/components/Herocarousel"
-import ProductCard from "@/components/ProductCard"
 import Searchbar from "@/components/Searchbar"
 import { getAllProducts } from "@/lib/actions"
 import Image from "next/image"
@@ -41,7 +40,7 @@ const Home = async () => {
         <div className="flex flex-wrap gap-x-8 gap-y-16">
           {allProducts?.map
           ((product) => (
-            <ProductCard key ={product._id} product={product} />
+            <P>{product.title}</div>
           ))}
         </div>
       </section>
