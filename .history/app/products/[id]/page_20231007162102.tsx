@@ -5,7 +5,7 @@ type Props = {
 }
 
 const ProductDetails = async ({params: {id}}: Props) => {
-  const product = await getProductById(id);
+  const product = await getProductById(id)
   return (
     <div>{id}</div>
   )
