@@ -37,7 +37,7 @@ const ProductDetails = async ({params: {id}}: Props) => {
                 target="_blank"
                 className="text-base text-black opacity-50"
               >
-                Visit Product
+                Vist Product
               </Link>
             </div>
           </div>

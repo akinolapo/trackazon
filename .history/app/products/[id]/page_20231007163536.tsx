@@ -1,6 +1,5 @@
 import { getProductById } from "@/lib/actions"
 import Image from "next/image";
-import Link from "next/link";
 import { redirect } from "next/navigation";
 
 type Props = {
@@ -31,14 +30,7 @@ const ProductDetails = async ({params: {id}}: Props) => {
               <p className="text-[28px] text-secondary font-semibold">
                 {product.title}
               </p>
-
-              <Link 
-                href={product.url}
-                target="_blank"
-                className="text-base text-black opacity-50"
-              >
-                Visit Product
-              </Link>
+              
             </div>
           </div>
         </div>
