@@ -117,9 +117,7 @@ const ProductDetails = async ({params: {id}}: Props) => {
             </div>
           </div>
 
-          <div className="my-7 flex flex-col gap-5">
-            <div className="flex gap-5 flex-wrap"></div>
-          </div>
+          <div className="my"></div>
 
         </div>
       </div>

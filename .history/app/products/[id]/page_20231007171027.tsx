@@ -105,20 +105,10 @@ const ProductDetails = async ({params: {id}}: Props) => {
                     width={16}
                     height={16}
                   />
-                  <p className="text-sm text-secondary font-semibold">
-                    {product.reviewsCount} Reviews
-                  </p>
+                  <p>{product.reviewsCount} Rewires</p>
                 </div>
               </div>
-
-              <p className="text-sm text-black opacity-50">
-                <span className="text-primary-green font-semibold">93%</span> of buyers have recommeded this
-              </p>
             </div>
-          </div>
-
-          <div className="my-7 flex flex-col gap-5">
-            <div className="flex gap-5 flex-wrap"></div>
           </div>
 
         </div>
