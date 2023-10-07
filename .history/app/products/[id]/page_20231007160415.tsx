@@ -2,9 +2,9 @@ type Props = {
   params: { id: string}
 }
 
-const ProductDetails = ({params: {id}}: Props) => {
+const ProductDetails = ({params}: {id} Props) => {
   return (
-    <div>{id}</div>
+    <div>{ProductDetails}</div>
   )
 }
 
