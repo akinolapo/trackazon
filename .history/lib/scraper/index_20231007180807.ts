@@ -30,6 +30,7 @@ export async function scrapeAmazonProduct(url:string) {
         const reviewsCount = extractReview (
             $('#acrCustomerReviewText')
         );
+
         const stars = extractRating(
             $('.a-size-base .a-color-base')
         );
@@ -74,8 +75,8 @@ export async function scrapeAmazonProduct(url:string) {
             priceHistory: [],
             discountRate: Number(discountRate),
             category: 'category', //get this
-            reviewsCount, //get this [Done]
-            stars, //get this [Done]
+            reviewsCount, //get this Done
+            stars, //get this
             isOutOfStock: outOfStock,
             description,
             lowestPrice: Number(currentPrice) || Number(originalPrice),

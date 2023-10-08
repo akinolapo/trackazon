@@ -130,8 +130,8 @@ export const extractReview = (element: any): number => {
   }
 };
 
-export const extractRating = (element: any): number => {
-  const match = element.match(/\d+\.\d+/); // Match the first float in the text
+export const extractRating = (ratingText: any): number => {
+  const match = ratingText.match(/\d+\.\d+/); // Match the first float in the text
 
   if (match) {
     const rating = parseFloat(match[0]); // Extract the first float
